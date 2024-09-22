@@ -2,12 +2,13 @@
 
 Live: https://add-to-a-shopping-list.netlify.app/
 
-***An app for taking down items as a list mainly as a shopping list, made for mobile phones. The items added are available as tiles in the screen and when clicked gets deleted.***
+***An app for taking down items as a list mainly as a shopping list, made for mobile phones. The items added are available as tiles in the screen and when clicked gets deleted. Makes use of Firebase to store the list items.***
 
 ## ⚒️ Built with:
 - HTML 5
 - CSS 3
 - JavaScript
+- Firebase
 
 ## 📷 Screenshots:
 
