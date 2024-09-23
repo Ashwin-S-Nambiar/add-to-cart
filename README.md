@@ -1,4 +1,4 @@
-# 🛒 Add To List
+# 🛒 Add To Cart
 
 Live: https://add-to-a-shopping-list.netlify.app/
 
