@@ -1,71 +1,204 @@
-html, body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "DM Mono", monospace;
-    background-color: #fffcf6;
+}
+
+body {
+    background: linear-gradient(135deg, #fffcf6 0%, #fff5e6 100%);
     color: #432000;
-    user-select: none;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 320px;
+    width: 100%;
+    max-width: 480px;
     margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.logo-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
 }
 
 img {
-    width: 150px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.input-group {
+    position: relative;
+    margin: 10px 0;
 }
 
 input {
+    width: 100%;
     color: #432000;
     background-color: #fbf3e4;
-    border: 0;
+    border: 1px solid transparent;
     padding: 15px;
-    border-radius: 8px;
-    font-size: 20px;
+    border-radius: 12px;
+    font-size: 18px;
     text-align: center;
-    font-family: "DM Mono", monospace;
-    margin: 10px 0;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border-color: #492206;
+    box-shadow: 0 0 0 1px rgba(73, 34, 6, 0.2);
 }
 
 button {
     color: #FDFDFD;
-    background-color: #492206;
-    border: 0;
+    background: linear-gradient(135deg, #492206 0%, #693612 100%);
+    border: none;
     padding: 15px;
-    border-radius: 8px;
-    font-size: 20px;
+    border-radius: 12px;
+    font-size: 18px;
     text-align: center;
-    font-family: "DM Mono", monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-origin: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #432000;
-    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
 }
 
 ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
 }
 
-ul li {
-    font-size: 20px;
+li {
+    font-size: 18px;
     background-color: #fbf2e4;
     padding: 15px;
-    border-radius: 8px;
-    flex-grow: 1;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-ul li:hover {
+li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     background-color: #FFECC7;
     cursor: pointer;
+}
+
+li:hover::before {
+    opacity: 1;
+}
+
+li:active {
+    transform: translateY(0);
+}
+
+.empty-message {
+    color: #666;
+    font-style: italic;
+    margin: 20px 0;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .logo-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    input, button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    ul {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    li {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    ul {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
 }

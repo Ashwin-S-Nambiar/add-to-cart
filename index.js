@@ -13,29 +13,41 @@ const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
 
+// Add item when Enter key is pressed
+inputFieldEl.addEventListener("keypress", function(event) {
+    if (event.key === "Enter" && inputFieldEl.value.trim()) {
+        addItem();
+    }
+});
+
 addButtonEl.addEventListener("click", function() {
-    let inputValue = inputFieldEl.value
+    if (inputFieldEl.value.trim()) {
+        addItem();
+    }
+});
+
+function addItem() {
+    const inputValue = inputFieldEl.value.trim();
+    push(shoppingListInDB, inputValue);
+    clearInputFieldEl();
     
-    push(shoppingListInDB, inputValue)
-    
-    clearInputFieldEl()
-})
+    // Add button click animation
+    addButtonEl.style.transform = "scale(0.95)";
+    setTimeout(() => {
+        addButtonEl.style.transform = "scale(1)";
+    }, 100);
+}
 
 onValue(shoppingListInDB, function(snapshot) {
     if (snapshot.exists()) {
         let itemsArray = Object.entries(snapshot.val())
-    
         clearShoppingListEl()
         
         for (let i = 0; i < itemsArray.length; i++) {
-            let currentItem = itemsArray[i]
-            let currentItemID = currentItem[0]
-            let currentItemValue = currentItem[1]
-            
-            appendItemToShoppingListEl(currentItem)
-        }    
+            appendItemToShoppingListEl(itemsArray[i])
+        }
     } else {
-        shoppingListEl.innerHTML = "No items here... yet"
+        shoppingListEl.innerHTML = '<div class="empty-message">No items here... yet</div>'
     }
 })
 
@@ -52,13 +64,17 @@ function appendItemToShoppingListEl(item) {
     let itemValue = item[1]
     
     let newEl = document.createElement("li")
-    
     newEl.textContent = itemValue
     
     newEl.addEventListener("click", function() {
-        let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
+        // Add removal animation
+        newEl.style.transform = "scale(0.9) translateY(10px)";
+        newEl.style.opacity = "0";
         
-        remove(exactLocationOfItemInDB)
+        setTimeout(() => {
+            let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
+            remove(exactLocationOfItemInDB)
+        }, 300);
     })
     
     shoppingListEl.append(newEl)
