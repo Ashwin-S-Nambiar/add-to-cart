@@ -15,7 +15,7 @@ A mobile-optimized shopping list application featuring real-time updates and clo
 
 ## ✨ Features
 
-- 📱 **Mobile-First Design** - Optimized for smartphone use with responsive interface
+- 📱 **Mobile-First Design** - Optimized for smartphone use with responsive interface in larger screens.
 - 🔄 **Real-Time Updates** - Instantly sync your shopping list across devices
 - ☁️ **Cloud Storage** - Never lose your shopping list with Firebase backend
 - 🎯 **Simple Interface** - Add and remove items with minimal clicks
@@ -91,10 +91,10 @@ We welcome contributions! Here's how you can help:
 <div align="center">
 
 ### Main Interface
-![Add To Cart Main Screen](https://github.com/Ashwin-S-Nambiar/add-to-list/assets/76719333/9fa39c77-1738-4b29-b071-0b42728420ee)
+![Add To Cart Main Screen](./assets/screenshots/AddToCart-1.png)
 
-### Shopping List View
-![Shopping List Items](https://github.com/Ashwin-S-Nambiar/add-to-list/assets/76719333/f5e5f033-fad0-41fe-82f8-a6d360250093)
+### Item Added To Cart
+![Shopping List Items](./assets/screenshots/AddToCart-2.png)
 
 </div>
 
