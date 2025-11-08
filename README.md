@@ -1,4 +1,4 @@
-# Add To Cart 🛒
+# Add To Cart
 
 <div align="center">
 
@@ -13,15 +13,15 @@ A mobile-optimized shopping list application featuring real-time updates and clo
 
 </div>
 
-## ✨ Features
+## Features
 
-- 📱 **Mobile-First Design** - Optimized for smartphone use with responsive interface in larger screens.
-- 🔄 **Real-Time Updates** - Instantly sync your shopping list across devices
-- ☁️ **Cloud Storage** - Never lose your shopping list with Firebase backend
-- 🎯 **Simple Interface** - Add and remove items with minimal clicks
-- 🎨 **Tile-Based Layout** - Clear, easy-to-read item organization
+- **Mobile-First Design** - Optimized for smartphone use with responsive interface in larger screens.
+- **Real-Time Updates** - Instantly sync your shopping list across devices
+- **Cloud Storage** - Never lose your shopping list with Firebase backend
+- **Simple Interface** - Add and remove items with minimal clicks
+- **Tile-Based Layout** - Clear, easy-to-read item organization
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Frontend
 - **[HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)** - Semantic markup structure
@@ -34,7 +34,7 @@ A mobile-optimized shopping list application featuring real-time updates and clo
   - Persistent data storage
   - Scalable infrastructure
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**
 
@@ -64,7 +64,7 @@ A mobile-optimized shopping list application featuring real-time updates and clo
      ```
    - Or using Live Server in VS Code
 
-## 🤝 Contributing 
+## Contributing 
 
 We welcome contributions! Here's how you can help:
 
@@ -86,7 +86,7 @@ We welcome contributions! Here's how you can help:
    ```
 5. Open a Pull Request
 
-## 📸 Screenshots
+## Screenshots
 
 <div align="center">
 
@@ -98,7 +98,7 @@ We welcome contributions! Here's how you can help:
 
 </div>
 
-## 🌍 Live
+## Live
 
 <div align="center">
 
@@ -106,7 +106,7 @@ We welcome contributions! Here's how you can help:
 
 </div>
 
-## 👤 Author
+## Author
 
 ### Ashwin S Nambiar
 - Portfolio: [ashwin.co.in](https://ashwin.co.in)
