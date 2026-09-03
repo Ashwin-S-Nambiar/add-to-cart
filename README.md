@@ -102,7 +102,7 @@ We welcome contributions! Here's how you can help:
 
 <div align="center">
 
-[![Visit Site](https://img.shields.io/badge/Visit_Site-000?style=for-the-badge&logo=netlify&logoColor=white)](https://add-to-a-shopping-list.netlify.app/)
+[![Visit Site](https://img.shields.io/badge/Visit_Site-000?style=for-the-badge&logo=netlify&logoColor=white)](https://cart.ashwin.co.in)
 
 </div>
 
